@@ -1,0 +1,61 @@
+/* Header Container */
+.header{    
+    height: 80px; 
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 14px;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Logo header */
+.header__logo-container{
+    height: 80%;
+    margin: 0 0 0 2em;
+}
+
+.header__logo-container img{
+    height: 100%;
+    display: block;
+}
+
+
+/* Opciones de navegacion */
+.header__nav {
+    height: 100%;
+    width: 50%;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.header__nav__option {
+    color: #e0e0e0;
+    text-decoration: none;    
+
+    font-family: 'Hind', sans-serif;
+
+    font-weight: lighter;
+    font-size: 0.8em;
+    letter-spacing: 2px;
+    
+}
+
+/* Iconos de contacto */
+.header__nav__icons-socials-container{}
+
+.header__nav__icons-socials-container a {
+    color: #e0e0e0;
+    font-size: 1.3em;
+    text-decoration: none;
+    margin: 0 0.2em;
+}
