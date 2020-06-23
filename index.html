@@ -7,10 +7,11 @@
         <link rel="stylesheet" href="assets/css/index.css">
 
         <title>IRBA</title>
+        <link rel="icon" type="image/png" href="assets/images/irba__favicon.png">
     </head>
     <body>
        
-        <header class="header">
+        <header class="header" id="header">
 
             <figure class="header__logo-container">
                 <img src="assets/images/irba__logo.png" alt="logo IRBA">
@@ -35,12 +36,22 @@
             </nav>
         </header>
 
-        <main class="main">
-            <h1 class="main__title">CLEAN MINIMALIST DESING</h1>
-            <p class="main__subtitle">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod tempore sunt dolorum ipsam iusto voluptate obcaecati.
-            </p>
+        <main class="main main--background-1 main--background-animation" id="main">
+            <div class="main__text-container">
+                <h1 class="main__title main__title--animation" id="main__title">CLEAN MINIMALIST DESING</h1>
+                <p class="main__subtitle main__subtitle--animation" id="main__subtitle">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Quod tempore sunt <br/> dolorum ipsam iusto voluptate obcaecati.
+                </p>
+            </div>
+
+            <div id="arrow__left" class="main__arrow main__arrow--left  main__arrow--background-5"  ><i class="main__arrow__icon fas fa-chevron-left"></i></div>
+            <div id="arrow__right" class="main__arrow main__arrow--right main__arrow--background-2" ><i class="main__arrow__icon a fas fa-chevron-right"></i></div>
         </main>
 
+        <div style="width: 100%; height: 100vh; background-color: aqua; margin: 0; padding: 0;"></div>
+
+        <script src="js/main-background-image.js"></script>
+        <script src="js/header-background.js"></script>
     </body>
 </html>
