@@ -1,0 +1,245 @@
+/* Main */
+
+.main{
+    height: 100vh;
+    width: 100%;
+
+    font-size: 14px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+/* Diferentes backgrounds */
+.main--background-1{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-1.jpg');
+    background-size: cover;  
+}
+
+.main--background-2{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-2.jpg');
+    background-size: cover;  
+}
+
+.main--background-3{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-3.jpg');
+    background-size: cover;  
+}
+
+.main--background-4{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-4.jpg');
+    background-size: cover;  
+}
+
+.main--background-5{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-5.jpg');
+    background-size: cover;  
+}
+
+
+/* Capa negra usada para la animacion de transicion */
+.main::before{
+    content: "";
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    opacity: 0;
+}
+
+/* Animacion de cambio de transicion */
+.main--background-animation::before{
+    animation-name: fadeInBackground;
+    animation-duration: 750ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInBackground{
+    0%{opacity: 1;}
+    75%{opacity: .5;}
+    100%{opacity: 0;}
+}
+
+
+
+
+
+/* Texto Central */
+.main__text-container{
+    color:#f4f4f4 ;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Titulo */
+.main__title{
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+/* Animacion Titulo */
+.main__title--animation{
+    animation-name: fadeInTitle;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fadeInTitle{
+    0%{
+        opacity: 0;
+        transform: scale(1) translateY(-10vh);
+    }
+
+    100%{
+        opacity: 1;
+        transform: scale(1) translateY(0vh);
+    }
+}
+
+
+/* Subtitulo */
+.main__subtitle{
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/* Animacion Subtitulo */
+.main__subtitle--animation{
+    animation-name: fadeInSubtitle;
+    animation-duration: 500ms;
+    animation-timing-function: ease-in;    
+}
+
+@keyframes fadeInSubtitle{
+    0%{
+        opacity: 0;
+        transform: translateY(10vh);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0vh);
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Flechas de Cambio */
+.main:hover .main__arrow{
+    opacity: 1;
+}
+
+
+.main__arrow{
+    position: absolute;
+    top: calc(50vh - 9vh);
+    
+    height: 18vh;
+    width: 2vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    
+
+    opacity: 0;
+    transition: 500ms;
+}
+
+.main__arrow--left {
+    left: 0;
+}
+
+.main__arrow--right {
+    right: 0;    
+}
+
+.main__arrow__icon {
+    font-size: 1em;
+    color:#f4f4f4;
+}
+
+
+/* Preview de la siguiente imagen */
+.main__arrow:hover{
+    width: 12.5vw;
+    height: 18vh;
+}
+
+
+/* Distintos Backgrounds */
+.main__arrow--background-1:hover{
+    background-image: url("../images/main__wallpaper-1.jpg");
+    background-size: cover;
+}
+
+.main__arrow--background-2:hover{
+    background-image: url("../images/main__wallpaper-2.jpg");
+    background-size: cover;
+}
+
+.main__arrow--background-3:hover{
+    background-image: url("../images/main__wallpaper-3.jpg");
+    background-size: cover;
+}
+
+.main__arrow--background-4:hover{
+    background-image: url("../images/main__wallpaper-4.jpg");
+    background-size: cover;
+}
+
+.main__arrow--background-5:hover{
+    background-image: url("../images/main__wallpaper-5.jpg");
+    background-size: cover;
+}
+
+
+
+
+/* Texto en la Preview */
+.main__arrow:hover .main__arrow__icon{
+    display: none;
+}
+
+
+.main__arrow:hover::before{
+    background: #111;
+    color:#f4f4f4;
+
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+
+    box-sizing: border-box;
+    padding: 0.2em 1em;
+}
+
+.main__arrow--left:hover::before{
+    content: "Previus";
+}
+
+.main__arrow--right:hover::before{
+    content: "Next";
+}
+
+
+
+
+
