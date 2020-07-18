@@ -1,3 +1,5 @@
+/* Main */
+
 .main{
     height: 100vh;
     width: 100%;
@@ -10,33 +12,35 @@
  
 }
 
+
+/* Diferentes backgrounds */
 .main--background-1{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/main__wallpaper-1.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-1.jpg');
     background-size: cover;  
 }
 
 .main--background-2{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('../images/main__wallpaper-2.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-2.jpg');
     background-size: cover;  
 }
 
 .main--background-3{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6)), url('../images/main__wallpaper-3.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-3.jpg');
     background-size: cover;  
 }
 
 .main--background-4{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.6)), url('../images/main__wallpaper-4.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-4.jpg');
     background-size: cover;  
 }
 
 .main--background-5{
-    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.7)), url('../images/main__wallpaper-5.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../images/main__wallpaper-5.jpg');
     background-size: cover;  
 }
 
 
-
+/* Capa negra usada para la animacion de transicion */
 .main::before{
     content: "";
 
@@ -49,12 +53,12 @@
     opacity: 0;
 }
 
+/* Animacion de cambio de transicion */
 .main--background-animation::before{
     animation-name: fadeInBackground;
     animation-duration: 750ms;
-    animation-timing-function: ease-in;
+    animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-
 }
 
 @keyframes fadeInBackground{
@@ -67,19 +71,20 @@
 
 
 
-
+/* Texto Central */
 .main__text-container{
     color:#f4f4f4 ;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
 
-
+/* Titulo */
 .main__title{
     font-size: 2.5em;
     font-weight: 500;
 }
 
+/* Animacion Titulo */
 .main__title--animation{
     animation-name: fadeInTitle;
     animation-duration: 500ms;
@@ -98,10 +103,14 @@
     }
 }
 
+
+/* Subtitulo */
 .main__subtitle{
     font-size: 1.2em;
     font-weight: 300;
 }
+
+/* Animacion Subtitulo */
 .main__subtitle--animation{
     animation-name: fadeInSubtitle;
     animation-duration: 500ms;
@@ -127,13 +136,7 @@
 
 
 
-
-
-
-
-
-
-
+/* Flechas de Cambio */
 .main:hover .main__arrow{
     opacity: 1;
 }
@@ -171,12 +174,14 @@
 }
 
 
-
+/* Preview de la siguiente imagen */
 .main__arrow:hover{
     width: 12.5vw;
     height: 18vh;
 }
 
+
+/* Distintos Backgrounds */
 .main__arrow--background-1:hover{
     background-image: url("../images/main__wallpaper-1.jpg");
     background-size: cover;
@@ -205,7 +210,7 @@
 
 
 
-
+/* Texto en la Preview */
 .main__arrow:hover .main__arrow__icon{
     display: none;
 }
