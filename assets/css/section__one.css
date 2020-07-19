@@ -1,0 +1,182 @@
+/* Seccion */
+.section-one{
+    height: 80vh;
+    width: 100vw;
+
+    position: relative;
+    
+    font-size: 14px;
+
+    background-image: url('../images/background__section-one.jpg');
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Container del circulo */
+.section-one__circle{
+    width:55vh;
+    height: 55vh;
+
+    position: relative;
+    left: 20%;
+}
+
+/* Circulo */
+.section-one__circle::before{
+    content: "";
+
+    height: 80%;
+    width: 80%;
+    
+    border: 3px solid #DDDDDD;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+
+
+
+
+
+
+/* Texto */
+.section-one__text{
+    background-color: black;
+    color: white;
+
+    border-radius: 50%;
+
+    width: 45%;
+    height: 45%;
+    
+    position: absolute;
+    top: 27.5%;
+    left: 27.5%;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-one__text__title{
+    text-align: center;
+    width: 70%;
+}
+
+.section-one__text__description{
+    text-align: center;
+    width: 60%;
+}
+
+/* Animacion para el cambio de texto */
+.section-one__text--animation{
+    animation-name: sectionOneTextAnimation;
+    animation-duration: 1000ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sectionOneTextAnimation{
+    0%{
+        color: white;
+    }
+    50%{
+        color: black;
+    }
+    100%{
+        color: white;
+    }
+}
+
+
+
+
+
+
+/* Iconos */
+.section-one__icon{
+    color: white;
+    background-color: black;
+    
+    border-radius: 50%;
+
+    width: 8%;
+    height: 8%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5em;
+
+    transition: 250ms;
+}
+
+
+.section-one__icon:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.section-one__icon--home{
+    position: absolute;
+    top: calc(10% - 4%);
+    left: calc(50% - 4%);
+}
+
+.section-one__icon--headphones{
+    position: absolute;
+    top: calc(30% - 4%);
+    left: calc(84.64% - 4%);
+}
+
+.section-one__icon--cogs{
+    position: absolute;
+    top: calc(70% - 4%);
+    left: calc(84.64% - 4%);
+}
+
+.section-one__icon--users{
+    position: absolute;
+    top: calc(90% - 4%);
+    left: calc(50% - 4%);
+}
+
+.section-one__icon--flask{
+    position: absolute;
+    top: calc(70% - 4%);
+    left: calc(15.35% - 4%);
+}
+
+.section-one__icon--umbrella{
+    position: absolute;
+    top: calc(30% - 4%);
+    left: calc(15.35% - 4%);
+}
+
+/* Animacion de Icono Activo */
+.section-one__icon--animation{
+    animation-name: changeSizeIcon;
+    animation-duration: 500ms;
+    animation-iteration-count: 6;
+    animation-direction: alternate;
+}
+
+
+@keyframes changeSizeIcon{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
