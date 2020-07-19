@@ -1,3 +1,4 @@
+//Iconos
 let icon_home = document.getElementById("section-one__icon--home");
 let icon_headphones = document.getElementById("section-one__icon--headphones");
 let icon_cogs = document.getElementById("section-one__icon--cogs");
@@ -5,13 +6,7 @@ let icon_users = document.getElementById("section-one__icon--users");
 let icon_flask = document.getElementById("section-one__icon--flask");
 let icon_umbrella = document.getElementById("section-one__icon--umbrella");
 
-
-let container = document.getElementById("section-one__text");
-let title = document.getElementById("section-one__text__title");
-let description = document.getElementById("section-one__text__description");
-
-
-
+//Iconos
 let icons = [
     icon_home,
     icon_headphones,
@@ -21,6 +16,14 @@ let icons = [
     icon_umbrella
 ];
 
+//Elementos
+let container = document.getElementById("section-one__text");
+let title = document.getElementById("section-one__text__title");
+let description = document.getElementById("section-one__text__description");
+
+
+
+//Titulos
 let titles = [
     "Brand New Features",
     "Done Awesomely",
@@ -30,6 +33,7 @@ let titles = [
     "Ultimate Solution"
 ];
 
+//Descripciones
 let descriptions = [
     "Competently transform proactive internal or organic",
     "Quicquam fratrum declivia gravitate. Nam coegit alto unda",
@@ -40,11 +44,14 @@ let descriptions = [
 ];
 
 
-
+//Cambio de circulo titilante
 function changeAnimation(i){
+    //Animacion del texto
     container.classList.add("section-one__text--animation");
+    //Animacion del icono
     icons[i].classList.add("section-one__icon--animation");
 
+    //Cuando desaparesca el texto cambiarlo
     setTimeout(() =>{
         title.innerHTML = titles[i];
         description.innerHTML = descriptions[i];
@@ -52,22 +59,29 @@ function changeAnimation(i){
 }
 
 
+//Siguiente aniamcion
 for (let i = 0; i < 6; i++) {
+    //Cuando termina la animacion de un icono
     icons[i].addEventListener('animationend', (event)=>{
+        //Elimina la animacion
         icons[i].classList.remove("section-one__icon--animation");
+        //Anima el siguiente circulo
         changeAnimation((i+1)%6);
     });
 }
 
 
-
+//Cuando se clickea un icono
 for (let i = 0; i < 6; i++) {
     icons[i].addEventListener('click', (event)=>{
+        //Cancela todas las animaciones
         cancelAnimations();
+        //Anima al icono seleccionado
         changeAnimation(i);
     });
 }
 
+//Cancelar todas las animaciones
 function cancelAnimations(){
     for (let i = 0; i < 6; i++) {
         let animations = icons[i].getAnimations;
@@ -79,7 +93,7 @@ function cancelAnimations(){
 }
 
 
-
+//Eliminar la animacion del texto
 container.addEventListener('animationend', (event) =>{
     container.classList.remove("section-one__text--animation");
 });
