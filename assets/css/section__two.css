@@ -1,0 +1,123 @@
+/* Seccion 2 */
+.section-two{
+    background-color: black;
+
+    width: 100vw;
+    height: 75vh;
+
+    margin: -20px 0 0 0;
+    
+    
+    box-sizing: border-box;
+
+    color: white;
+
+    font-size: 14px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Hind', sans-serif;
+}
+
+
+
+.section-two__title-container{
+    
+}
+
+/* Titulo */
+.section-two__title{
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-style: normal;
+
+    font-size: 3em;
+}
+
+
+/* Contianer del carrusel */
+.section-two__carrusel{
+    width: 60%;
+    height: 40%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Container de los elementos del carrusel */
+.section-two__elements{
+    width: 95%;
+
+    display: flex;
+    flex-wrap: nowrap;
+
+    overflow: hidden;
+
+    
+}
+
+/* Elemento del carrusel */
+.section-two__element{
+    background-color: black;
+
+    width: 33.3333%;
+    flex-shrink: 0;
+
+    transform: translateX(-100%);
+    transition: 500ms;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Icono del elemento */
+.section-two__icon-element{
+    text-align: center;
+    font-size: 2.5em;
+    font-style: normal;
+    margin: 0 0 0.2em 0;
+}
+
+/* Titulo del elemento */
+.section-two__title-element{
+    text-align: center;
+    width: 80%;
+
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+/* Texto del elemento */
+.section-two__text-element{
+    text-align: center;
+    width: 80%;
+
+    font-style: normal;
+    font-size: 01em;
+    color: #848484;
+
+    margin: -0.75em 0 0 0;
+}
+
+
+/* Flecha del elemento */
+.section-two__arrow{
+    color: white;
+    font-size: 1.5em;
+    width: 2.5%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
