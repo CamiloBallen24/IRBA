@@ -1,0 +1,90 @@
+.section-three{
+    background-color: white;
+    width: 100vw;
+
+    transition-duration: 1000ms;
+    transition-property: height;
+
+    overflow: hidden;
+}
+
+
+.section-three__elements{
+    width: 70%;
+    margin: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.section-three__element{
+    width: 33.3333%;
+    flex-shrink: 0;
+
+    position: relative;
+    
+    
+
+    
+}
+
+.section-three__figure{
+    margin: 0;
+    width: 100%;
+    
+
+}
+
+.section-three__image{
+    width: 100%;
+    display: block;
+    vertical-align: top;
+    
+}
+
+.section-three__element-text{
+    position: absolute;
+    background-color: thistle;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    
+    visibility: hidden;
+}
+
+
+
+.section-three__element--animation-in{
+    animation-name: sectionThreeElementIn;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.section-three__element--animation-out{
+    animation-name: sectionThreeElementOut;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes sectionThreeElementIn{
+    0%{
+        opacity: 0;
+        transform: rotateY(90deg) scaleX(0.25) scaleY(0.25);
+    }
+    100%{
+        opacity: 1;
+        transform: rotateY(0) scaleX(1) scaleY(1);
+    }
+}
+
+@keyframes sectionThreeElementOut{
+    0%{
+        opacity: 1;
+        transform: rotateY(0) scaleX(1) scaleY(1);
+    }
+    100%{
+        opacity: 0;
+        transform: rotateY(90deg) scaleX(0.25) scaleY(0.25);
+    }
+}
